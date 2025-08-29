@@ -32,17 +32,16 @@ const currentTime = now.toLocaleTimeString('en-US', { hour12: true });
 
 
   add_history.innerHTML += `
-    <div class="flex justify-between items-center shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] 
-                bg-[rgba(255,255,255,1)] w-full rounded-[12px] p-[10px]">
+    <div class="flex md:justify-between justify-start gap-2 items-center shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[rgba(255,255,255,1)] w-full rounded-[12px] md:p-[10px] p-[5px] md:border-0 border-2 border-red-300">
       <div>
-        <p class="font-semibold text-[18px]">
+        <p class="font-semibold md:text-[18px] text-[10px]">
           ${track.parentNode.parentNode.children[1].children[0].innerHTML}
         </p>
-        <p class="text-[#5C5C5C] text-[18px]">
+        <p class="text-[#5C5C5C] md:text-[18px] text-[10px]">
           ${track.parentNode.parentNode.children[2].children[0].innerHTML}
         </p>
       </div>
-      <p>${currentTime}</p>
+      <p class="text-[10px] md:text-[16px]">${currentTime}</p>
     </div>
 `
 
