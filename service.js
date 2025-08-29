@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('insufficient coin');
         return;
       }
-      alert(
+      alert('📞calling ' +
         track.parentNode.parentNode.children[1].children[0].innerHTML +
-        ':' +
-        track.parentNode.parentNode.children[2].children[0].innerHTML
+        '-' +
+        track.parentNode.parentNode.children[2].children[0].innerHTML + '...'
       );
 
       let count = parseInt(reduce_coin.innerHTML || '0', 10) - 20;
@@ -37,16 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const currentTime = now.toLocaleTimeString('en-US', { hour12: true });
 
       add_history.innerHTML += `
-        <div class="flex md:justify-between justify-start gap-2 items-center shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[rgba(255,255,255,1)] w-full rounded-[12px] md:p-[10px] p-[5px] md:border-0 border-2 border-red-300">
+        <div class="flex md:justify-between justify-start gap-2 items-center shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[rgba(255,255,255,1)] w-full rounded-[12px] md:p-[10px] p-[5px]">
           <div>
-            <p class="font-semibold md:text-[18px] text-[10px]">
+            <p class="font-semibold  md:text-[18px]">
               ${track.parentNode.parentNode.children[1].children[0].innerHTML}
             </p>
-            <p class="text-[#5C5C5C] md:text-[18px] text-[10px]">
+            <p class="text-[#5C5C5C] md:text-[18px] ">
               ${track.parentNode.parentNode.children[2].children[0].innerHTML}
             </p>
           </div>
-          <p class="text-[10px] md:text-[16px]">${currentTime}</p>
+          <p class="text-[16px]">${currentTime}</p>
         </div>
       `;
     });
