@@ -33,7 +33,7 @@ const currentTime = now.toLocaleTimeString('en-US', { hour12: true });
 
   add_history.innerHTML += `
     <div class="flex justify-between items-center shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] 
-                bg-[rgba(255,255,255,1)] w-full rounded-[12px] p-[24px]">
+                bg-[rgba(255,255,255,1)] w-full rounded-[12px] p-[10px]">
       <div>
         <p class="font-semibold text-[18px]">
           ${track.parentNode.parentNode.children[1].children[0].innerHTML}
