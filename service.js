@@ -27,8 +27,8 @@ call_track.forEach(track => {
     let count = parseInt(reduce_coin.innerHTML) - 20;
     reduce_coin.innerHTML = count;
   
-const now = new Date();
-const currentTime = now.toLocaleTimeString('en-US', { hour12: true });
+   const now = new Date();
+   const currentTime = now.toLocaleTimeString('en-US', { hour12: true });
 
 
   add_history.innerHTML += `
