@@ -25,12 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       alert('📞calling ' +
-        track.parentNode.parentNode.children[1].children[0].innerHTML +
+        track.parentNode.parentNode.children[1].children[0].innerText +
         '-' +
-        track.parentNode.parentNode.children[2].children[0].innerHTML + '...'
+        track.parentNode.parentNode.children[2].children[0].innerText + '...'
       );
 
-      let count = parseInt(reduce_coin.innerHTML || '0', 10) - 20;
+
+      let count = parseInt(reduce_coin.innerText) - 20;
       reduce_coin.innerHTML = count;
 
       const now = new Date();
@@ -40,10 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="flex md:justify-between justify-start gap-2 items-center shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[rgba(255,255,255,1)] w-full rounded-[12px] md:p-[10px] p-[5px]">
           <div>
             <p class="font-semibold  md:text-[18px]">
-              ${track.parentNode.parentNode.children[1].children[0].innerHTML}
+              ${track.parentNode.parentNode.children[1].children[0].innerText}
             </p>
             <p class="text-[#5C5C5C] md:text-[18px] ">
-              ${track.parentNode.parentNode.children[2].children[0].innerHTML}
+              ${track.parentNode.parentNode.children[2].children[0].innerText}
             </p>
           </div>
           <p class="text-[16px]">${currentTime}</p>
