@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const btnElement = (clicked.tagName === 'BUTTON') ? clicked : (clicked.closest('button') || clicked);
 
-    // find the number inside the card
+    
     let text = '';
     let ancestor = btnElement;
     for (let i = 0; ancestor && ancestor !== document.body && i < 8; i++, ancestor = ancestor.parentElement) {
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // copy to clipboard
+   
     try {
       await navigator.clipboard.writeText(text);
     } catch {
@@ -88,19 +88,19 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.removeChild(ta);
     }
 
-    // change button text to "Copied"
+   
     const originalText = btnElement.innerHTML;
     btnElement.innerHTML = "Copied";
 
-    // restore after 1.5 sec
+    
     setTimeout(() => {
       btnElement.innerHTML = originalText;
     }, 1500);
 
-    // show alert with copied text
+  
     alert("Copied: " + text);
 
-    // increase copy count
+    
     increase_copy.innerHTML = String((parseInt(increase_copy.innerHTML || '0', 10) || 0) + 1);
   });
 });
