@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   harts.forEach((icon) => {
     icon.addEventListener('click', () => {
-      let count = parseInt(hart_increase.innerHTML || '0', 10) + 1;
+      let count = parseInt(hart_increase.innerHTML) + 1;
       hart_increase.innerHTML = count;
     });
   });
 
   call_track.forEach(track => {
     track.addEventListener('click', () => {
-      if (parseInt(reduce_coin.innerHTML || '0', 10) < 20) {
+      if (parseInt(reduce_coin.innerHTML) < 20) {
         alert('insufficient coin');
         return;
       }
